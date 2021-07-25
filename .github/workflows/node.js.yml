@@ -27,6 +27,8 @@ jobs:
       - name: Install Packages
         run: cd ./ui-platform && npm install
       - name: Build page
+        env:
+          CONTEXT: $GITHUB_REPOSITORY
         run: cd ./ui-platform && npm run build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
