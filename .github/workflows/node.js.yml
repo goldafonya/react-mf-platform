@@ -24,11 +24,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Set env
+          run: echo "CONTEXT=$(echo $GITHUB_REPOSITORY)" >> $GITHUB_ENV
       - name: Install Packages
         run: cd ./ui-platform && npm install
       - name: Build page
-        env:
-          CONTEXT: $GITHUB_REPOSITORY
         run: cd ./ui-platform && npm run build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
