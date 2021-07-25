@@ -17,6 +17,8 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x]
+    env:
+      CONTEXT: /react-mf-platform/
 
     steps:
       - uses: actions/checkout@v2
@@ -24,8 +26,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Set env
-        run: echo "CONTEXT=/$(echo $GITHUB_REPOSITORY)/" >> $GITHUB_ENV
       - name: Install Packages
         run: cd ./ui-platform && npm install
       - name: Build page
