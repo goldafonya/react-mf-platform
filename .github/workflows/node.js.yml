@@ -24,6 +24,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: checkout ui-platform
+        run: cd ./ui-platform
       - name: Install Packages
         run: npm install
       - name: Build page
