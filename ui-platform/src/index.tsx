@@ -10,7 +10,7 @@ ReactDOM.render(
 
 if (module.hot) {
     module.hot.accept('./RootComponent', () => {
-      const RootComponent = require('./RootComponent').default;
+      const RootComponent = require('./RootComponent').RootComponent;
       ReactDOM.render(<RootComponent />, document.getElementById('root'));
     })
   }

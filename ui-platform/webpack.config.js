@@ -1,9 +1,9 @@
-const path = require('path');
-const webpack = require('webpack');
-const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const {WebpackManifestPlugin} = require("webpack-manifest-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const isProd = process.env.NODE_ENV === "production";
 const isAnalyzer = process.env.ANALYZER === "true";
@@ -34,16 +34,20 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         publicPath: "/",
         filename: "[name].[contenthash].js",
+        chunkFilename: "[name].[contenthash].chunk.js",
         clean: true,
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js", ".jsx"],
     },
+    optimization: {
+        runtimeChunk: "single",
+    },
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
+                use: "ts-loader",
                 exclude: /node_modules/,
             },
             {
@@ -52,12 +56,12 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     // { loader: "style-loader" },
                     {
-                        loader: 'css-loader',
+                        loader: "css-loader",
                         options: {
-                            modules: true
-                        }
+                            modules: true,
+                        },
                     },
-                    { loader: "sass-loader" },
+                    {loader: "sass-loader"},
                 ],
             },
             {
@@ -75,15 +79,26 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[name].[contenthash].css"
+            filename: "[name].[contenthash].css",
         }),
         new HtmlWebpackPlugin({
             inject: true,
-            title: "TEST APP TITLE",
+            title: "AA",
             template: "./public/index.html",
-            meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
+            favicon: "./public/favicon.ico",
+            base: "/",
+            meta: {viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"},
         }),
-        new BundleAnalyzerPlugin({ analyzerMode: isAnalyzer ? "server" : "disabled" }),
-        new WebpackManifestPlugin()
-    ]
+        new webpack.DefinePlugin({
+            process: {
+                env: {
+                    NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+                    TIME_BUILD: JSON.stringify(new Date().toISOString()),
+                    APP_VERSION: JSON.stringify(require("./package").version),
+                },
+            },
+        }),
+        new BundleAnalyzerPlugin({analyzerMode: isAnalyzer ? "server" : "disabled"}),
+        new WebpackManifestPlugin(),
+    ],
 };
