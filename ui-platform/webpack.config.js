@@ -15,6 +15,7 @@ const performance = isProd ? {
 } : {};
 const devtool = isProd ? "hidden-source-map" : "eval-cheap-source-map";
 const target = isProd ? ["web", "es5"] : undefined;
+const publicPath = process.env.CONTEXT || "/";
 
 console.log("isProd", isProd);
 console.log("isAnalyzer", isAnalyzer);
@@ -32,7 +33,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "dist"),
-        publicPath: "/",
+        publicPath,
         filename: "[name].[contenthash].js",
         chunkFilename: "[name].[contenthash].chunk.js",
         clean: true,
@@ -86,7 +87,7 @@ module.exports = {
             title: "AA",
             template: "./public/index.html",
             favicon: "./public/favicon.ico",
-            base: "/",
+            base: publicPath,
             meta: {viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"},
         }),
         new webpack.DefinePlugin({
