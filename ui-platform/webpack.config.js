@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const isProd = process.env.NODE_ENV === "production";
+const isProd = true;
 const isAnalyzer = process.env.ANALYZER === "true";
 const mode = isProd ? "production" : "development";
 const performance = isProd ? {
@@ -21,13 +21,15 @@ console.log("isProd", isProd);
 console.log("isAnalyzer", isAnalyzer);
 
 module.exports = {
-    entry: path.resolve(__dirname, "src", "index.tsx"),
+    entry: ["babel-polyfill", path.resolve(__dirname, "src", "index.tsx")],
     mode,
     devtool,
     target,
     performance,
     devServer: {
         port: 3000,
+        host: "0.0.0.0",
+        useLocalIp: true,
         hot: true,
         historyApiFallback: true,
     },
@@ -93,7 +95,7 @@ module.exports = {
         new webpack.DefinePlugin({
             process: {
                 env: {
-                    NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+                    NODE_ENV: JSON.stringify(mode),
                     TIME_BUILD: JSON.stringify(new Date().toISOString()),
                     APP_VERSION: JSON.stringify(require("./package").version),
                 },
