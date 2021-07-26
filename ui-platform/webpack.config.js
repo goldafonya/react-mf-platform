@@ -9,7 +9,7 @@ const isProd = process.env.NODE_ENV === "production";
 const isAnalyzer = process.env.ANALYZER === "true";
 const mode = isProd ? "production" : "development";
 const performance = isProd ? {
-    hints: "error",
+    hints: "warning",
     maxAssetSize: 200000,
     maxEntrypointSize: 400000,
 } : {};
