@@ -1,11 +1,7 @@
 {
   "main.css": "/react-mf-platform/main.0bb9721faccbd31d31d4.css",
-  "main.js": "/react-mf-platform/main.a4fe07e793731a030094.js",
-  "runtime.js": "/react-mf-platform/runtime.2cb3d6888c3718f879e2.js",
-  "app.js": "/react-mf-platform/app.d4616e4044476c2826b9.chunk.js",
-  "login.js": "/react-mf-platform/login.7c254c0a81519009561e.chunk.js",
-  "150.chunk.js": "/react-mf-platform/150.f5a8149e078cde6a3c86.chunk.js",
-  "816.chunk.js": "/react-mf-platform/816.307e2c152916adb6942c.chunk.js",
+  "main.js": "/react-mf-platform/main.a020bcc3f1e428caecf8.js",
+  "runtime.js": "/react-mf-platform/runtime.329e1719871209229b15.js",
   "roboto-latin-500-normal.woff": "/react-mf-platform/roboto-latin-500-normal.woff",
   "roboto-latin-900-normal.woff": "/react-mf-platform/roboto-latin-900-normal.woff",
   "roboto-latin-100-normal.woff": "/react-mf-platform/roboto-latin-100-normal.woff",
@@ -21,10 +17,6 @@
   "favicon.ico": "/react-mf-platform/favicon.ico",
   "index.html": "/react-mf-platform/index.html",
   "main.css.map": "/react-mf-platform/main.0bb9721faccbd31d31d4.css.map",
-  "main.js.map": "/react-mf-platform/main.a4fe07e793731a030094.js.map",
-  "runtime.js.map": "/react-mf-platform/runtime.2cb3d6888c3718f879e2.js.map",
-  "app.chunk.js.map": "/react-mf-platform/app.d4616e4044476c2826b9.chunk.js.map",
-  "login.chunk.js.map": "/react-mf-platform/login.7c254c0a81519009561e.chunk.js.map",
-  "150.chunk.js.map": "/react-mf-platform/150.f5a8149e078cde6a3c86.chunk.js.map",
-  "816.chunk.js.map": "/react-mf-platform/816.307e2c152916adb6942c.chunk.js.map"
+  "main.js.map": "/react-mf-platform/main.a020bcc3f1e428caecf8.js.map",
+  "runtime.js.map": "/react-mf-platform/runtime.329e1719871209229b15.js.map"
 }
