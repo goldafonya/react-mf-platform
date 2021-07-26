@@ -1,7 +1,7 @@
 {
   "main.css": "/react-mf-platform/main.0bb9721faccbd31d31d4.css",
-  "main.js": "/react-mf-platform/main.a020bcc3f1e428caecf8.js",
-  "runtime.js": "/react-mf-platform/runtime.329e1719871209229b15.js",
+  "main.js": "/react-mf-platform/main.2297d3436c1de4545165.js",
+  "runtime.js": "/react-mf-platform/runtime.ba6ba31b687edbb73cb4.js",
   "roboto-latin-500-normal.woff": "/react-mf-platform/roboto-latin-500-normal.woff",
   "roboto-latin-900-normal.woff": "/react-mf-platform/roboto-latin-900-normal.woff",
   "roboto-latin-100-normal.woff": "/react-mf-platform/roboto-latin-100-normal.woff",
@@ -17,6 +17,6 @@
   "favicon.ico": "/react-mf-platform/favicon.ico",
   "index.html": "/react-mf-platform/index.html",
   "main.css.map": "/react-mf-platform/main.0bb9721faccbd31d31d4.css.map",
-  "main.js.map": "/react-mf-platform/main.a020bcc3f1e428caecf8.js.map",
-  "runtime.js.map": "/react-mf-platform/runtime.329e1719871209229b15.js.map"
+  "main.js.map": "/react-mf-platform/main.2297d3436c1de4545165.js.map",
+  "runtime.js.map": "/react-mf-platform/runtime.ba6ba31b687edbb73cb4.js.map"
 }
