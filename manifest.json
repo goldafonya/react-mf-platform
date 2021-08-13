@@ -1,7 +1,11 @@
 {
-  "main.css": "/react-mf-platform/main.0bb9721faccbd31d31d4.css",
-  "main.js": "/react-mf-platform/main.2297d3436c1de4545165.js",
-  "runtime.js": "/react-mf-platform/runtime.ba6ba31b687edbb73cb4.js",
+  "main.js": "/react-mf-platform/main.ffe3108ff78ddd52862e.js",
+  "runtime.js": "/react-mf-platform/runtime.26210389c48c9b02ffb6.js",
+  "995.css": "/react-mf-platform/995.0bb9721faccbd31d31d4.css",
+  "995.chunk.js": "/react-mf-platform/995.e3f9079d7c1c1cc7dd37.chunk.js",
+  "294.chunk.js": "/react-mf-platform/294.2e6dcc5a6135a028c52f.chunk.js",
+  "935.chunk.js": "/react-mf-platform/935.be0b2fac47e282784ee8.chunk.js",
+  "347.chunk.js": "/react-mf-platform/347.2c56c61e2a1e85417c93.chunk.js",
   "roboto-latin-500-normal.woff": "/react-mf-platform/roboto-latin-500-normal.woff",
   "roboto-latin-900-normal.woff": "/react-mf-platform/roboto-latin-900-normal.woff",
   "roboto-latin-100-normal.woff": "/react-mf-platform/roboto-latin-100-normal.woff",
@@ -16,7 +20,11 @@
   "roboto-latin-900-normal.woff2": "/react-mf-platform/roboto-latin-900-normal.woff2",
   "favicon.ico": "/react-mf-platform/favicon.ico",
   "index.html": "/react-mf-platform/index.html",
-  "main.css.map": "/react-mf-platform/main.0bb9721faccbd31d31d4.css.map",
-  "main.js.map": "/react-mf-platform/main.2297d3436c1de4545165.js.map",
-  "runtime.js.map": "/react-mf-platform/runtime.ba6ba31b687edbb73cb4.js.map"
+  "main.js.map": "/react-mf-platform/main.ffe3108ff78ddd52862e.js.map",
+  "runtime.js.map": "/react-mf-platform/runtime.26210389c48c9b02ffb6.js.map",
+  "995.css.map": "/react-mf-platform/995.0bb9721faccbd31d31d4.css.map",
+  "995.chunk.js.map": "/react-mf-platform/995.e3f9079d7c1c1cc7dd37.chunk.js.map",
+  "294.chunk.js.map": "/react-mf-platform/294.2e6dcc5a6135a028c52f.chunk.js.map",
+  "935.chunk.js.map": "/react-mf-platform/935.be0b2fac47e282784ee8.chunk.js.map",
+  "347.chunk.js.map": "/react-mf-platform/347.2c56c61e2a1e85417c93.chunk.js.map"
 }
