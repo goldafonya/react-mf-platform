@@ -1,19 +1,18 @@
-import {RouteComponentProps} from "@reach/router";
-import React from "react";
-
 export default class Project {
 
     id: string;
     title: string;
     description: string;
     url: string;
-    component: React.FC<RouteComponentProps>;
+    path: string;
+    module: string;
 
-    constructor(id: string, title: string, description: string, url: string, component: React.FC) {
+    constructor(id: string, title: string, description: string, url: string, path: string, module: string) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.url = url;
-        this.component = component;
+        this.path = path;
+        this.module = module;
     }
 }

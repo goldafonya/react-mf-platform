@@ -18,7 +18,7 @@ export const ProjectCard: FC<IProjectCard> = ({ project }) => {
 
     return (
         <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-            <Link to={project.url}>
+            <Link to={project.path}>
                 <Paper elevation={isHover ? 4 : 1}>
                     <Card>
                         <CardContent>

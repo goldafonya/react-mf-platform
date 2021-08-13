@@ -4,8 +4,10 @@ const {WebpackManifestPlugin} = require("webpack-manifest-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ModuleFederationPlugin = require("webpack").container
+    .ModuleFederationPlugin;
 
-const isProd = true;
+const isProd = process.env.NODE_ENV === "production";
 const isAnalyzer = process.env.ANALYZER === "true";
 const mode = isProd ? "production" : "development";
 const performance = isProd ? {
@@ -49,6 +51,13 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /bootstrap\.tsx$/,
+                loader: "bundle-loader",
+                options: {
+                    lazy: true,
+                },
+            },
+            {
                 test: /\.tsx?$/,
                 use: "ts-loader",
                 exclude: /node_modules/,
@@ -81,6 +90,23 @@ module.exports = {
         ],
     },
     plugins: [
+        new ModuleFederationPlugin({
+            name: "platformApp",
+            // remotes: {
+            //     reactMobxApp: "reactMobxApp@http://localhost:3001/reactMobxEntry.js",
+            // },
+            shared: {
+                react: {
+                    singleton: true,
+                },
+                "react-dom": {
+                    singleton: true,
+                },
+                "@material-ui/core": {
+                    singleton: true,
+                },
+            },
+        }),
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash].css",
         }),

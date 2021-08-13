@@ -1,6 +1,4 @@
 import Project from "../models/Project";
-import {Foo} from "../components/Foo";
-import {Bar} from "../components/Bar";
 
 export default class ProjectService {
     static getProjectList = () => {
@@ -8,18 +6,12 @@ export default class ProjectService {
         return (
             [
                 new Project(
-                        "1",
-                    "foo",
-                    "description descriptiondescription descriptiondescription description",
-                    "/foo",
-                    Foo
-                ),
-                new Project(
-                        "2",
-                    "bar",
-                    "description descriptiondescription descriptiondescription description",
-                    "/bar",
-                    Bar
+                    "reactMobxApp",
+                    "reactMobxApp",
+                    "Description",
+                    "https://goldafonya.github.io/react-mobx-todo-list/reactMobxEntry.js",
+                    "/reactMobxApp",
+                    "./ToDoList",
                 ),
             ]
         )
